@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test('mobile score', async ({ page }) => {
   await page.goto('https://pagespeed.web.dev/');
-  await page.getByPlaceholder('Enter a web page URL').fill('https://www.answerconnect.com/');
+  await page.getByPlaceholder('Enter a web page URL').fill('exampleurl.com');
   await page.getByRole('button', { name: 'Analyze' }).click();
  const valueofMobileScore = await page.locator("(//div[@class='lh-gauge__percentage'])[9]").textContent();
  console.log('The mobile score is' , valueofMobileScore);
@@ -13,7 +13,7 @@ test('mobile score', async ({ page }) => {
 
 test('desktop score', async({page})=>{
     await page.goto('https://pagespeed.web.dev/');
-    await page.getByPlaceholder('Enter a web page URL').fill('https://www.answerconnect.com/');    
+    await page.getByPlaceholder('Enter a web page URL').fill('exampleurl.com');    
     await page.getByRole('button', { name: 'Analyze' }).click();
     await page.getByRole('tab', { name: 'Desktop' }).click();
     const valueofDesktopScore =  await page.locator("(//div[@class='lh-gauge__percentage'])[21]").textContent();
