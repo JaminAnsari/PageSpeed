@@ -13,5 +13,8 @@
     "lighthouse": "^9.6.8",
     "playwright": "^1.28.1",
     "playwright-lighthouse": "^2.2.2"
+  },
+  "dependencies": {
+    "@google-cloud/storage": "^7.6.0"
   }
 }
